@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "destinyBackend/wsgi.py"
+      "dest": "destinyBackend/wsgi.pypy"
     }
   ]
 }

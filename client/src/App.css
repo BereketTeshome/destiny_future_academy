@@ -61,13 +61,13 @@ html {
 
 .nav-links ul li a {
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   padding: 27px 1px;
   letter-spacing: 2px;
   transition: 0.4s all;
   color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777,
+    1px 1px 0 #777;
 }
 .nav-links ul li a:hover {
   color: blue;
