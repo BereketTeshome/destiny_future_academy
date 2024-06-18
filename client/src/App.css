@@ -628,6 +628,85 @@ textarea {
 .text-content p {
   font-size: 1em;
   color: #555;
+  margin-bottom: 10px;
+}
+/* Styles for Special Academic Programs Page */
+
+.special-programs-page {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.programs-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 40px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.programs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.program-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.program-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.program-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.learn-more-button {
+  background-color: #ffa500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #ff9100;
 }
 
 @keyframes rotateImage {
@@ -719,6 +798,73 @@ textarea {
 .image p {
   font-family: "Courier New", Courier, monospace;
   margin-top: 0.3em;
+}
+
+/* library page */
+/* Library.css */
+
+.library-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.library-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffa500; /* Orange color for the title */
+}
+
+.ebook-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ebook-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px); /* Adjust width as per your design */
+  transition: background-color 0.3s ease;
+}
+
+.ebook-item:hover {
+  background-color: #ffe0b2; /* Light orange on hover */
+}
+
+.ebook-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.ebook-author {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ebook-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-button,
+.download-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-button {
+  background-color: #ffa500; /* Orange background for the View button */
+  color: #fff;
+}
+
+.download-button {
+  background-color: #333; /* Dark background for the Download button */
+  color: #fff;
 }
 
 footer {

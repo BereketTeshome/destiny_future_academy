@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
-import { createTheme, ThemeProvider, makeStyles } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
   CssBaseline,
   FormControl,
@@ -19,27 +19,31 @@ const theme = createTheme({
       main: "#FFA500", // Orange color
     },
   },
-});
-
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-  },
-  rowOdd: {
-    backgroundColor: "#FFA500", // Orange background for odd rows
-  },
-  cell: {
-    display: "flex",
-    alignItems: "center",
-    textAlign: "center",
-    fontSize: 14,
-    color: "#333",
-  },
-  hoverCell: {
-    "&:hover": {
-      backgroundColor: "#ffe0b2", // Light orange on hover
+  components: {
+    MuiDataGrid: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#fff",
+          borderRadius: 8,
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+        },
+        rowOdd: {
+          backgroundColor: "#FFA500", // Orange background for odd rows
+        },
+        rowEven: {
+          backgroundColor: "#fff", // White background for even rows
+        },
+        cell: {
+          display: "flex",
+          alignItems: "center",
+          textAlign: "center",
+          fontSize: 14,
+          color: "#333",
+        },
+        "& .MuiDataGrid-cell:hover": {
+          backgroundColor: "#ffe0b2", // Light orange on hover
+        },
+      },
     },
   },
 });
@@ -523,8 +527,7 @@ const grade5to8Rows = [
 ];
 
 export default function Schedule() {
-  const classes = useStyles();
-  const [grade, setGrade] = useState("nursery"); // Default grade is nursery
+  const [grade, setGrade] = useState("nursery");
 
   const handleGradeChange = (event) => {
     setGrade(event.target.value);
@@ -562,12 +565,10 @@ export default function Schedule() {
             disableColumnMenu
             disableSelectionOnClick
             rowHeight={45}
-            className={classes.root} // Apply root styling to DataGrid
-            getRowClassName={(params) =>
-              params.rowIndex % 2 !== 0 ? classes.rowOdd : ""
-            } // Apply rowOdd class to odd rows
-            cellClassName={classes.cell} // Apply cell styling
-            classes={{ cell: classes.hoverCell }} // Apply hover effect to cells
+            classes={{
+              rowOdd: "row-odd",
+              rowEven: "row-even",
+            }}
           />
         </Box>
       </Box>
