@@ -10,7 +10,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/blogs");
+        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/blogs`);
         console.log(res.data);
 
         if (res.data && res.data.length > 0) {
