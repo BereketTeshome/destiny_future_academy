@@ -91,7 +91,7 @@ html {
 .home {
   background: url("/home3.jpg") center/cover no-repeat grey;
   background-blend-mode: multiply;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   background-attachment: fixed;
   background-size: cover;
