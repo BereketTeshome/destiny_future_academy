@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Library = () => {
   const ebooks = [
@@ -14,7 +15,14 @@ const Library = () => {
 
   return (
     <div className="library-container">
-      <h1 className="library-title">Library Resources</h1>
+      <div className="library-header">
+        <h1 className="title" style={{ textAlign: "center", flex: "1" }}>
+          Library
+        </h1>
+        <Link to="/programs">
+          <i>Special Programs</i>
+        </Link>
+      </div>
       <div className="ebook-grid">
         {ebooks.map((ebook) => (
           <div className="ebook-item" key={ebook.id}>
