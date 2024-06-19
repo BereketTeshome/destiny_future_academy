@@ -1181,6 +1181,12 @@ footer .bottom-details .bottom_text {
     display: flex;
     flex-direction: column;
   }
+  .programs-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .nav-links ul:first-of-type {
     padding-top: 20px;
   }
@@ -1238,6 +1244,14 @@ footer .bottom-details .bottom_text {
     display: flex;
     flex-direction: column;
     display: block;
+  }
+
+  .ebook-grid {
+    flex-direction: column;
+  }
+
+  .ebook-item {
+    width: 100%; /* Two columns on smaller screens */
   }
 
   .content .top .logo-details {
