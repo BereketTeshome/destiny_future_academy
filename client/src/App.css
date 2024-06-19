@@ -859,12 +859,11 @@ p {
 
 .ebook-actions {
   display: flex;
-  justify-content: center; /* Center buttons horizontally */
+  justify-content: center;
   gap: 10px;
 }
 
-.view-button,
-.download-button {
+.view-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -872,13 +871,11 @@ p {
 }
 
 .view-button {
-  background-color: #ffa500; /* Orange background for the View button */
+  background-color: #ffa500;
   color: #fff;
 }
-
-.download-button {
-  background-color: #333; /* Dark background for the Download button */
-  color: #fff;
+.view-button:hover {
+  background-color: #f96106;
 }
 
 .lds-hourglass {
@@ -953,8 +950,8 @@ footer .content .top {
   display: flex;
 }
 .content .top .media-icons a {
-  height: 40px;
-  width: 40px;
+  height: 37px;
+  width: 37px;
   margin: 0 8px;
   border-radius: 50%;
   text-align: center;
